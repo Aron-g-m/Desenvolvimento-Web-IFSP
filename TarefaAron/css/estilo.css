@@ -1,0 +1,52 @@
+* {
+    background-color: rgb(20, 20, 44) ;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
+    padding: 0px;
+}
+
+h1 {
+    color: lightblue;
+    margin: 13px;
+    font-size: 200%;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 5px;
+    text-align: center;
+}
+
+li {
+    background-color: rgb(47, 79, 79);
+}
+
+li:hover {
+    background-color: rgb(75, 130, 100);
+}
+
+
+p:hover {
+    background-color: rgb(75, 130, 100);
+}
+
+.projeto {
+    background-color: rgb(47, 79, 79);
+    border: 5px solid grey;
+    padding: 5px;
+    margin: 5%;
+}
+
+.projeto:hover {
+    background-color: rgb(75, 130, 130);
+}
+
+#side {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.projeto:hover {
+    background-color: rgb(75, 130, 130);
+}
