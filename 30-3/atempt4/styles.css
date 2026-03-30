@@ -1,12 +1,12 @@
 :root {
-  --cor-fundo: #ff0000;
+  --cor-fundo: #ffffff;
   --cor-texto: #333333;
   --cor-primaria: #2c3e50;
   --cor-card: #ecf0f1;
 }
 
 #tema:checked ~ * {
-  --cor-fundo: #009900;
+  --cor-fundo: #000000;
   --cor-texto: #009900;
   --cor-card: #2d2d2d;
 }
@@ -15,6 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: --cor-fundo;
 }
 
 body {
@@ -60,7 +61,7 @@ body {
 }
 
 #tema:checked + .theme-switch .slider {
-  background-color: #666;
+  background-color: #555;
 }
 
 #tema:checked + .theme-switch .slider::before {
