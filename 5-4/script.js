@@ -43,7 +43,7 @@ function addTask() {
     body.appendChild(title);
     body.appendChild(selector);
     card.appendChild(body);
-    col.appendChild(card);s
+    col.appendChild(card);
     container.appendChild(col);
 
     inputField.value = "";
