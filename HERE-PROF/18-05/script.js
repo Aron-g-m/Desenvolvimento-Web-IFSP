@@ -1,0 +1,56 @@
+async function buscarSeries() {
+    const inputBusca = document.querySelector("#busca");
+    const texto = inputBusca.value.trim();
+    const divResultado = document.querySelector("#resultado");
+
+    divResultado.innerHTML = "";
+
+    if (!texto) {
+        divResultado.innerHTML = "<p class='mensagem'>Por favor, digite o nome de uma série para buscar.</p>";
+        return;
+    }
+
+    try {
+        const resposta = await fetch(`https://api.tvmaze.com/search/shows?q=${encodeURIComponent(texto)}`);
+        const dados = await resposta.json();
+
+        if (dados.length === 0) {
+            divResultado.innerHTML = "<p class='mensagem'>Nenhuma série encontrada com esse nome.</p>";
+            return;
+        }
+
+        dados.forEach(item => {
+            const serie = item.show;
+            const score = item.score;
+
+            const card = document.createElement("div");
+            card.className = "card";
+
+            if (serie.image && serie.image.medium) {
+                const img = document.createElement("img");
+                img.src = serie.image.medium;
+                img.alt = `Capa de ${serie.name}`;
+                card.appendChild(img);
+            } else {
+                const semImg = document.createElement("div");
+                semImg.className = "sem-imagem";
+                semImg.textContent = "Imagem não disponível";
+                card.appendChild(semImg);
+            }
+
+            const titulo = document.createElement("h3");
+            titulo.textContent = serie.name;
+            card.appendChild(titulo);
+
+            const nota = document.createElement("p");
+            nota.textContent = `Score: ${score.toFixed(2)}`;
+            card.appendChild(nota);
+
+            divResultado.appendChild(card);
+        });
+
+    } catch (erro) {
+        console.error(erro);
+        divResultado.innerHTML = "<p class='mensagem'>Ocorreu um erro ao buscar os dados. Tente novamente mais tarde.</p>";
+    }
+}
