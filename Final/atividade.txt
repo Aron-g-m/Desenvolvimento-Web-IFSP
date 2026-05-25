@@ -1,13 +1,13 @@
-adicionar o modal
+PENDENTE:
 
+adicionar o modal
 uma função de pesquisa
 a deleção de conta
 responsividade
+converter para 12 colunas
 
 
-
-
-
+ATIVIDADE:
 
 Desenvolver uma aplicação web que implementa:
 
