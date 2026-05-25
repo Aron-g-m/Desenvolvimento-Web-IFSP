@@ -1,3 +1,14 @@
+adicionar o modal
+
+uma função de pesquisa
+a deleção de conta
+responsividade
+
+
+
+
+
+
 Desenvolver uma aplicação web que implementa:
 
 Duas funcionalidades de cadastro: (cadastro de login de usuário, cadastro de alunos, etc)
