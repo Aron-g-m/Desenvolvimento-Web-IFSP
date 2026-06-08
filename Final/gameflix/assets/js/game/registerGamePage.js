@@ -104,9 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
           localStorage.setItem('currentUser', JSON.stringify(currentUser)); // Atualiza o currentUser
         }
 
-        // Exibe uma mensagem de sucesso
-        message.textContent = 'Game registered successfully!';
-        message.className = 'alert alert-success';
+        // Exibe modal de sucesso
+        showSuccessModal();
 
         // Limpa o formulário e a pré-visualização
         form.reset();
@@ -125,13 +124,23 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('currentUser', JSON.stringify(currentUser)); // Atualiza o currentUser
       }
 
-      // Exibe uma mensagem de sucesso
-      message.textContent = 'Game registered successfully!';
-      message.className = 'alert alert-success';
+      // Exibe modal de sucesso
+      showSuccessModal();
 
       // Limpa o formulário e a pré-visualização
       form.reset();
       preview.style.display = 'none';
     }
   });
+
+  function showSuccessModal() {
+    const modal = document.getElementById('success-modal');
+    const closeBtn = document.getElementById('close-modal');
+    
+    modal.style.display = 'flex';
+    
+    closeBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
+    });
+  }
 });
