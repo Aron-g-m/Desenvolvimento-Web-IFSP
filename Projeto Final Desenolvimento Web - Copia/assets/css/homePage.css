@@ -58,7 +58,7 @@ body {
 }
 
 .custom-border-primary {
-    border-color: var(--primary);z
+    border-color: var(--primary);
 }
 
 .header, .auth-buttons button, .filter-button {
