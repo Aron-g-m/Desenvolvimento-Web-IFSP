@@ -31,6 +31,7 @@ body {
     gap: 1rem;
     padding: 0 1rem;
     max-width: 100%;
+    width: 100%;
 }
 
 .row {
@@ -38,8 +39,16 @@ body {
     grid-template-columns: repeat(12, 1fr);
     gap: 1rem;
     width: 100%;
+    grid-column: 1 / -1;
 }
 
+.col-md-4 {
+    grid-column: span 4;
+}
+
+.col-md-6 {
+    grid-column: span 6;
+}
 
 .custom-bg-primary {
     background-color: var(--primary);
