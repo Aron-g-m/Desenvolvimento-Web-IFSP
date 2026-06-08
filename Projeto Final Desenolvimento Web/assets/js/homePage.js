@@ -41,13 +41,17 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   }
 
+  
   // Função para limpar os jogos salvos
   function clearGames() {
-      if (confirm('Are you sure you want to clear all saved games?')) {
+      $('#confirmModal').modal('show');
+      
+      document.getElementById('confirmClear').addEventListener('click', function () {
           localStorage.clear();
           games = []; // Limpa o array de jogos
           displayGames(); // Atualiza a visualização após limpar
-      }
+          $('#confirmModal').modal('hide');
+      });
   }
 
   // Adicionar evento ao botão de limpar jogos
